@@ -1,0 +1,81 @@
+module.exports = (sequelize,DataTypes)=>{
+    const Manufacturing_costs = sequelize.define("Manufacturing_costs",{
+          
+            acc_subject:{
+                 type:DataTypes.STRING(50),
+                 primaryKey:true,
+                 allowNull:false       
+            },
+            date_from:{
+                type:DataTypes.STRING(10),
+                primaryKey:true,
+                allowNull:false 
+            },
+            date_to:{
+                type:DataTypes.STRING(10),
+                primaryKey:true,
+                allowNull:false 
+            },
+            synthesis:{
+                type:DataTypes.DOUBLE,
+               
+            },
+            syn_creations:{
+                type:DataTypes.DOUBLE,
+            },
+            syn_PILOT:{
+                type:DataTypes.DOUBLE,
+            },
+          
+            synthesis_common:{
+            type:DataTypes.DOUBLE,
+           },
+           syn_fixed_cost:{
+            type:DataTypes.DOUBLE,
+           },
+           syn_variable_cost:{
+            type:DataTypes.DOUBLE,
+           },
+           syn_fix_var_tot:{
+            type:DataTypes.DOUBLE,
+           },
+           np_fix_cost:{
+            type:DataTypes.DOUBLE,
+           },
+           np_variable_cost:{
+            type:DataTypes.DOUBLE,
+           },
+           np_fix_var_tot:{
+            type:DataTypes.DOUBLE,
+           },
+           finish_drug_fix_cost:{
+            type:DataTypes.DOUBLE,
+           },
+           finish_drug_var_cost:{
+            type:DataTypes.DOUBLE,
+           },
+           finish_fix_var_tot:{
+            type:DataTypes.DOUBLE,
+           },
+           common_fix_cost:{
+            type:DataTypes.DOUBLE,
+           },
+           common_var_cost:{
+            type:DataTypes.DOUBLE,
+           },
+           common_fix_var_tot:{
+            type:DataTypes.DOUBLE,
+           },
+         fix_tot:{
+            type:DataTypes.DOUBLE,
+         },
+         var_tot:{
+            type:DataTypes.DOUBLE,
+         },
+         tot:{
+            type:DataTypes.DOUBLE,
+         }
+    });
+   
+    return Manufacturing_costs;
+}

@@ -1,0 +1,40 @@
+import React from 'react'
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import Herb_prod_manhr from './Production_mnhr/Herb_prod_manhr';
+import Nat_prod_manhr from './Production_mnhr/Nat_prod_manhr';
+import Pilot_prod_manhr from './Production_mnhr/Pilot_prod_manhr';
+import Prodctn_pr_manhr from './Production_mnhr/Prodctn_pr_manhr';
+import Sys_prod_manhr from './Production_mnhr/Sys_prod_manhr';
+
+function production_mnhr22() {
+  return (
+    <div className='container'>
+      <div className='row'>
+        <Tabs
+                defaultActiveKey="Sys_Api"
+                id="uncontrolled-tab-example"
+                className="tabs">
+            <Tab eventKey="Sys_Api" title="합성API">
+                <Sys_prod_manhr/>
+            </Tab>
+            <Tab eventKey="pilot" title="Pilot">
+                <Pilot_prod_manhr/>
+            </Tab>
+
+            <Tab eventKey="product_api" title="조품API">
+                <Prodctn_pr_manhr/>
+            </Tab>
+            <Tab eventKey="herbel_api" title="생약원료의약품">
+                <Herb_prod_manhr/>
+            </Tab>
+            <Tab eventKey="finish_drug" title="완제의약품">
+                <Nat_prod_manhr/>
+            </Tab>
+        </Tabs>
+      </div>
+    </div>
+  )
+}
+
+export default production_mnhr22
